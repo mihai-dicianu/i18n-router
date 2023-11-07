@@ -1,5 +1,8 @@
 {
     "ROUTES.home": "acasa",
     "ROUTES.about-us": "despre-noi",
-    "ROUTES.contact": "contact"
+    "ROUTES.contact": "contact",
+    "ROUTES.account": "cont",
+    "ROUTES.dashboard": "panou",
+    "ROUTES.details": "detalii"
 }

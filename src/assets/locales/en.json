@@ -1,5 +1,8 @@
 {
     "ROUTES.home": "home",
     "ROUTES.about-us": "about-us",
-    "ROUTES.contact": "contact"
+    "ROUTES.contact": "contact",
+    "ROUTES.account": "account",
+    "ROUTES.dashboard": "panel",
+    "ROUTES.details": "details"
 }

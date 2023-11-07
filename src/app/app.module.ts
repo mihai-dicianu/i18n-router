@@ -9,6 +9,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HomeComponent } from './pages/home/home.component';
+import { AccountModule } from './modules/account/account.module';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -32,7 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
           useFactory: (createTranslateLoader),
           deps: [HttpClient]
       }
-    })
+    }),
+    AccountModule
   ],
   providers: [],
   bootstrap: [AppComponent]
