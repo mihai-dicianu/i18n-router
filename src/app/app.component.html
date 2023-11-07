@@ -1,4 +1,8 @@
-<a  routerLink="/">Home</a>
-<a  routerLink="/about-us">About us</a>
-<a  routerLink="/contact">Contact</a>
+<button (click)="switchLang()">Change lang</button>
+
+
+<a [routerLink]="['/', 'home'] | localize" >Home</a>
+<a  [routerLink]="['/','about-us'] | localize">About us</a>
+<a  [routerLink]="['/','contact'] | localize">contact</a>
+<a  [routerLink]="'/contact' | localize">Contact</a>
 <router-outlet></router-outlet>
