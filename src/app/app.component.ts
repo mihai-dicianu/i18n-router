@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
 
 @Component({
@@ -9,7 +10,19 @@ import { LocalizeRouterService } from '@gilsdav/ngx-translate-router';
 export class AppComponent {
   title = 'i18n-router';
 
-  constructor(private localize: LocalizeRouterService) { }
+  constructor(private localize: LocalizeRouterService, router: Router) {
+    router.events.forEach((event) => {
+      if(event instanceof NavigationStart) {
+        console.log(router.url)
+        let translatedPath: any = this.localize.translateRoute('/home');
+        console.log(translatedPath)
+      }
+      // NavigationEnd
+      // NavigationCancel
+      // NavigationError
+      // RoutesRecognized
+    });
+  }
 
   ngOnInit() {
     // should be triggered on every language change
